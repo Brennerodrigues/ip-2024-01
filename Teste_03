@@ -1,0 +1,169 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMU3MfSEkd9cONy62gu8qOo",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Brennerodrigues/ip-2024-01/blob/main/Teste_03\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "01"
+      ],
+      "metadata": {
+        "id": "Ng0mVwidMS7G"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "WvhdUUrbMN9J"
+      },
+      "outputs": [],
+      "source": [
+        "package main\n",
+        "import \"fmt\"\n",
+        "import \"bufio\"\n",
+        "import \"os\"\n",
+        "\n",
+        "func main() {\n",
+        "    var palavra string\n",
+        "    armazenamentoConjunto := bufio.NewScanner(os.Stdin)\n",
+        "\n",
+        "    for scanner.Scan(){\n",
+        "\t\tpalavra = scanner.Text()\n",
+        "\t\tif (str==\"#\"){\n",
+        "\t\t    return\n",
+        "\t\t}\n",
+        "\t\tfor x := (len(palavra)-1); x >= 0; x--{\n",
+        "\t\t    fmt.Print(string(palavra[x]))\n",
+        "\t\t}\n",
+        "\t\tfmt.Println()\n",
+        "\t}\n",
+        "}\n"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "02"
+      ],
+      "metadata": {
+        "id": "B3mke9kQMVjF"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "package main\n",
+        "import \"fmt\"\n",
+        "\n",
+        "func main() {\n",
+        "\tvar n int\n",
+        "\tfmt.Scan(&n)\n",
+        "\n",
+        "\tfor _; n > 0; n-- {\n",
+        "\n",
+        "\t\tvar tam int\n",
+        "\t\tfmt.Scan(&tam)\n",
+        "\t\tvet := make([]int, tam)\n",
+        "\t\tfor i := 0; i < tam; i++ {\n",
+        "\t\t\tfmt.Scan(&vet[i])\n",
+        "\t\t}\n",
+        "\n",
+        "\t\ttrocaOpostosSeMenor(vet)\n",
+        "\t\tfmt.Println(vet)\n",
+        "\t}\n",
+        "}\n",
+        "func altera(vet []int, p1 int, p2 int) {\n",
+        "\tvet[p1], vet[p2] = vet[p2], vet[p1]\n",
+        "\n",
+        "}\n",
+        "func trocaOpostosSeMenor(vet []int) {\n",
+        "\tfor i := 0; i < (len(vet) / 2); i++ {\n",
+        "\n",
+        "\t\tif vet[i] < vet[(len(vet)-1)-i] {\n",
+        "\t\t\taltera(vet, i, len(vet)-1-i)\n",
+        "\t\t}\n",
+        "\t}\n",
+        "}"
+      ],
+      "metadata": {
+        "id": "S2fZ8SNsMV6P"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "03"
+      ],
+      "metadata": {
+        "id": "DgDOkgiwMWG9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "package main\n",
+        "import \"fmt\"\n",
+        "\n",
+        "func main() {\n",
+        "    var m int\n",
+        "\n",
+        "    fmt.Scanln(&m)\n",
+        "    seq := make([]int, m)\n",
+        "\n",
+        "\n",
+        "        for i := 0; i < m; i++ {\n",
+        "            fmt.Scan(&seq[i])\n",
+        "\n",
+        "    }\n",
+        "\n",
+        "    BubbleSort(seq)\n",
+        "    fmt.Println(seq)\n",
+        "}\n",
+        "\n",
+        "func BubbleSort(l []int) {\n",
+        "    n := len(l)\n",
+        "\n",
+        "    for i := 0; i < n-1; i++ {\n",
+        "        for j := 0; j < n-i-1; j++ {\n",
+        "            if l[j] > l[j+1] {\n",
+        "                l[j], l[j+1] = l[j+1], l[j]\n",
+        "            }\n",
+        "        }\n",
+        "    }\n",
+        "}"
+      ],
+      "metadata": {
+        "id": "pTKFStJ8MWPt"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
